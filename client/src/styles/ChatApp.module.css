@@ -1,0 +1,10 @@
+.main_container {
+  display: flex;
+}
+
+@media (width < 800px) {
+  .message_transition {
+    width: 100vw;
+    position: fixed;
+  }
+}

@@ -1,0 +1,78 @@
+.overlay {
+  height: 100svh;
+  display: grid;
+  place-items: center;
+  background-color: hsl(0, 0%, 94%);
+}
+
+.auth_modal {
+  background-color: hsl(0, 1%, 67%);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 1rem;
+  padding: 4rem 2rem 3rem 2rem;
+  border-radius: 1rem;
+  width: 350px;
+}
+
+h2 {
+  font-size: 2rem;
+}
+
+.auth_modal input[type="text"],
+.btn_auth {
+  border-radius: 0.75rem;
+  padding: 0.25rem 1rem;
+  border: none;
+}
+
+.auth_modal input[type="text"] {
+  outline: none;
+}
+
+.btn_auth {
+  background-color: white;
+  cursor: pointer;
+}
+
+.link,
+.error {
+  font-size: 0.8rem;
+}
+
+.link {
+  cursor: pointer;
+  position: relative;
+  font-weight: 700;
+  text-decoration: none;
+  color: black;
+}
+
+.link::after {
+  position: absolute;
+  bottom: -1px;
+  right: 0;
+  content: "";
+  width: 48%;
+  height: 2px;
+  background-color: #000;
+}
+
+.error {
+  color: rgb(192, 57, 4);
+}
+
+.hidden {
+  opacity: 0;
+}
+
+@media (width < 600px) {
+  .auth_modal {
+    position: fixed;
+    inset: 0 0 0 0;
+    width: auto;
+    border-radius: 0;
+  }
+}

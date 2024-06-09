@@ -1,0 +1,176 @@
+.profile {
+  position: absolute;
+  z-index: 200;
+  background-color: #fff;
+  width: 100%;
+  height: 100%;
+}
+
+.profile[data-is-crop-tool-open="true"] {
+  z-index: 500;
+}
+
+.header {
+  height: 80px;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+  padding: 1rem;
+}
+
+.header h1 {
+  font-size: 1.5rem;
+  font-weight: 700;
+}
+
+.btn_exit {
+  border: none;
+  width: 2rem;
+  height: 2rem;
+  border-radius: 50%;
+  background-color: transparent;
+}
+
+.btn_exit:hover {
+  background-color: hsl(0, 0%, 94%);
+}
+
+.profile_pic {
+  display: grid;
+  place-items: center;
+  position: relative;
+}
+
+.profile_pic img,
+.profile_pic span {
+  transition: opacity 0.4s ease;
+}
+
+.profile_pic img {
+  width: 180px;
+  height: 180px;
+  border-radius: 50%;
+  position: relative;
+  background-color: hsl(0, 0%, 94%);
+}
+
+.profile_pic:hover img {
+  opacity: 0.4;
+}
+
+.profile_pic span {
+  position: absolute;
+  opacity: 0;
+  font-weight: 700;
+}
+
+.profile_pic:hover span {
+  opacity: 1;
+}
+
+.profile_pic input[type="file"] {
+  position: absolute;
+  opacity: 0;
+  width: 100%;
+  height: 100%;
+  cursor: pointer;
+}
+
+.profile_image {
+  width: 250px;
+  height: 250px;
+  background-position: center;
+  background-size: contain;
+  border: 1px solid black;
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1rem;
+  padding-top: 2rem;
+}
+
+.btn_edit,
+.btn_save {
+  border: none;
+  padding: 0;
+  background-color: transparent;
+}
+
+.btn_logout {
+  background-color: hsl(0, 0%, 94%);
+  border: none;
+  padding: 0.5rem 1rem;
+  border-radius: 0.75rem;
+  transition: background-color 0.2s ease;
+  margin-top: 1rem;
+}
+
+.btn_logout:hover {
+  background-color: hsl(0, 0%, 88%);
+}
+
+.container {
+  padding-inline: 2rem;
+}
+
+.info {
+  width: 100%;
+  padding: 1rem 2rem;
+  background-color: hsl(0, 0%, 97%);
+  border-radius: 1rem;
+  position: relative;
+  margin-top: 1rem;
+}
+
+.info input,
+.info textarea {
+  border: none;
+  padding: 0;
+  background-color: transparent;
+  outline: none;
+  width: 100%;
+  color: black;
+}
+
+.info[data-is-editing="true"]::after {
+  position: absolute;
+  content: "";
+  bottom: 1rem;
+  right: 2rem;
+  width: calc(100% - 4rem);
+  height: 2px;
+  background-color: black;
+}
+
+.info textarea {
+  resize: none;
+}
+
+.info input {
+  margin-bottom: 7px;
+}
+
+.info span {
+  display: block;
+  width: 100%;
+  margin-bottom: 7px;
+  overflow-wrap: break-word;
+}
+
+.secondary_header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  color: black;
+  gap: 1rem;
+  margin-bottom: 0.5rem;
+}
+
+.secondary_header .title {
+  font-weight: 600;
+  font-size: 1.1rem;
+}
